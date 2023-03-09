@@ -68,6 +68,18 @@ class BinarySearchTree:
             return self._search(item, cur_node.right)
         return False
 
+    def inorder(self):
+        def _inorder(cur_node):
+            if cur_node.left:
+                _inorder(cur_node.left)
+            print(cur_node.item, end = ' ')
+            if cur_node.right:
+                _inorder(cur_node.right)
+        _inorder(self.root)
+        print()
+            
+
+
 bst = BinarySearchTree()
 bst.insert(5)
 bst.insert(4)
@@ -80,3 +92,4 @@ bst.insert(8)
 
 bst.delete(9)
 print(bst.search(9))
+bst.inorder()
