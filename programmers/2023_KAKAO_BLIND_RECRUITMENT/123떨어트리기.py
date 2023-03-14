@@ -61,9 +61,9 @@ def solution(edges, target):
                         [2] * (sur_cap % 2) + [3] * (sur_cap // 2)
         # for idx, node in enumerate()
         # print(leaf_result)
-        # for idx, node in enumerate(order_list):
-        #     if node == leaf:
-        #         answer[idx] = leaf_result.pop(0)
+        for idx, node in enumerate(order_list):
+            if node == leaf:
+                answer[idx] = leaf_result.pop(0)
 
     return answer
 
