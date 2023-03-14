@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(int(1e6))
 input = sys.stdin.readline
 
 def find_parent(parent, x):
