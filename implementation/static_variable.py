@@ -1,3 +1,5 @@
+import sys
+
 class Person:
     temp = "Human"
 
@@ -10,4 +12,16 @@ man = Person("hwanseung")
 women = Person("good")
 
 print(man.temp, women.temp)
+print(id(man.temp), id(women.temp))
 
+global_variable = "Human"
+print(id(man.temp), id(global_variable))
+
+
+def local_function(x):
+    a = "Human"
+    print(f"local variable in function: {id(a)}, global variable: {id(global_variable)} ")
+    return x ** 2
+
+
+print(sys.getrefcount("Human"))
