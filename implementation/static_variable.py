@@ -23,5 +23,16 @@ def local_function(x):
     print(f"local variable in function: {id(a)}, global variable: {id(global_variable)} ")
     return x ** 2
 
+print(local_function(2))
 
-print(sys.getrefcount("Human"))
+print('\n\n')
+
+global_variable = 15
+print(f"global variable: {id(global_variable)}")
+
+
+def local_function():
+    a = 15
+    print(f"local variable in function: {id(a)}")
+
+local_function()
